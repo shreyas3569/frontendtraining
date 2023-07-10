@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Roboto&family=Roboto+Condensed:wght@300&family=Work+Sans:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.drupal-services{
+    background-color:#0020f6 ;
+}
+.service__image__wrapper{
+    background-image: url('https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon.svg');
+    background-repeat: no-repeat;
+    height: 15rem;
+    width: 15rem;
+    background-position-x: 50%;
+    background-position-y:center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+}
+.service__image__wrapper:before{
+    background: url('https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon-line.svg') no-repeat 50%/contain;
+    content: "";
+    height: 17.5rem;
+    position: absolute;
+    top: -1.125rem;
+    transform: scale(.5);
+    transition: all .2s ease-in-out;
+    width: 17.5rem;
+    z-index: -1;
+}
+.service__image__wrapper:hover:before{
+    transform: scale(1);
+    z-index: 1;
+}
+
+
+.service__image__wrapper img{
+    width:6rem;
+}
+.drupal-services__heading{
+    margin-top: 0;
+    font-size:5rem;
+    padding-top:5rem;
+    color:white;
+}
+.drupal-services__heading::before{
+    content: "";
+    height:0.75rem;
+    width:150px;
+    display:inline-block;
+    margin-bottom:15px;
+    vertical-align: middle;
+    margin-right:50px;
+    background-color: yellow;
+}
+.service__wrapper{
+    max-width: 65rem;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap:2.5rem;
+    padding-bottom: 50px;
+}
+.service__card{
+    width:30%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+/* .service__title a::before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom:0;
+
+} */
+.service--link{
+    text-decoration: none;
+    color: white;
+}
+.service__desc{
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.service__title{
+    font-size:1.5rem;
+    margin-top: 20px;
+}
+
+/* responsiveness for mobile */
+@media only screen and (min-width:375px )and (max-width:667px) {
+    .drupal-services{
+        padding-bottom: 85px;
+        padding-top: 85px;
+    }
+    .drupal-services__heading{
+        margin-top: 0;
+        font-size:2.5rem;
+        padding-top:unset;
+        color:white;
+        margin-bottom: 30px;
+        padding-left: 80px;
+    }
+    .drupal-services__heading::before{
+        content: "";
+        position: absolute;
+        height:0.65rem;
+        width:40px;
+        display:inline-block;
+        margin-bottom:15px;
+        vertical-align: middle;
+        margin-right:unset;
+        background-color: yellow;
+        margin-right: 10px;
+        left: 0;
+    }
+    .service__wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 75px;
+        padding:0px 20px
+
+    }
+    .service__card{
+        width:unset;
+
+    }
+    .service__title{
+    font-size:1.25rem;
+    font-weight: 900;
+    }
+    .service__desc{
+        margin-top: 15px;
+
+    }
+}
+@media only screen and (min-width:668px )and (max-widthdx:1024px){
+    .drupal-services__heading::before{
+        display: none;
+    }
+    .drupal-services{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .service__title{
+        font-size:1.1rem;
+        margin-top: 20px;
+        font-weight: 900;
+        }
+    .drupal-services__heading {
+        padding-top: unset;
+        width: 50%;
+        }
+}
